@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter | তাপমাত্রা রূপান্তরকারী</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1><i class="fa-solid fa-temperature-half"></i> Temperature Converter</h1>
+            <p>সেলসিয়াস, ফারেনহাইট ও কেলভিন ক্যালকুলেটর</p>
+        </div>
+
+        <!-- Celsius Input -->
+        <div class="input-group">
+            <label for="celsius">Celsius (সেলসিয়াস)</label>
+            <div class="input-box">
+                <input type="number" id="celsius" placeholder="Enter Celsius...">
+                <span>°C</span>
+            </div>
+        </div>
+
+        <!-- Fahrenheit Input -->
+        <div class="input-group">
+            <label for="fahrenheit">Fahrenheit (ফারেনহাইট)</label>
+            <div class="input-box">
+                <input type="number" id="fahrenheit" placeholder="Enter Fahrenheit...">
+                <span>°F</span>
+            </div>
+        </div>
+
+        <!-- Kelvin Input -->
+        <div class="input-group">
+            <label for="kelvin">Kelvin (কেলভিন)</label>
+            <div class="input-box">
+                <input type="number" id="kelvin" placeholder="Enter Kelvin...">
+                <span>K</span>
+            </div>
+        </div>
+
+        <!-- Quick Presets -->
+        <div class="quick-presets">
+            <button class="preset-btn" onclick="setTemperature(0)">🧊 Freezing (0°C)</button>
+            <button class="preset-btn" onclick="setTemperature(25)">🏠 Room (25°C)</button>
+            <button class="preset-btn" onclick="setTemperature(100)">🔥 Boiling (100°C)</button>
+        </div>
+
+        <!-- Actions -->
+        <div class="actions">
+            <button class="btn btn-reset" onclick="resetForm()">
+                <i class="fa-solid fa-rotate-right"></i> Reset
+            </button>
+        </div>
+
+        <!-- Visual Thermometer Bar -->
+        <div class="thermometer-container">
+            <div class="thermometer-bar" id="tempBar"></div>
+        </div>
+        <div class="status-text" id="statusText">তাপমাত্রা ইনপুট করুন</div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
